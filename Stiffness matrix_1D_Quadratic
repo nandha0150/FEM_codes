@@ -1,0 +1,16 @@
+
+%Matlab code for Generating stiffness matrix using  1D - Quadratic elements
+function Ke = stiff(xi, xvec)
+
+%-------------------------------------------------------------%
+% This function calculates the integrand of element stiffness 
+% matrix for one element (xvec) at one gauss point (xi)
+% Created by Nandha Kumar S on 05/05/2021
+%-------------------------------------------------------------%
+
+B = [ (xi -0.5), -2*xi, (xi+0.5)];
+J = B*xvec;
+
+Ke = (1/J) *( B'*B );
+
+end

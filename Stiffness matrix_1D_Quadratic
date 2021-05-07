@@ -1,5 +1,6 @@
 
 %Matlab code for Generating stiffness matrix using  1D - Quadratic elements
+
 function Ke = stiff(xi, xvec)
 
 %-------------------------------------------------------------%

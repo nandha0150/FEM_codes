@@ -22,7 +22,7 @@ Ke_bar = (E*A/le)*[1 -1; -1 1];
 % Overall elemental stiffness Matrix for the frame element
 kep = zeros(6,6);
 kep(1:3:4, 1:3:4) = Ke_bar;
-kep([2:3, 5:6]) = Ke_beam;
+kep([2:3, 5:6],[2:3, 5:6]) = Ke_beam;
 
 Q = zeros(6,6);
 Q([1:2, 1:2]) = [l, m; m -1];
